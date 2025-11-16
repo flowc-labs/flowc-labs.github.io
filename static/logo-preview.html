@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flowc Logo Preview</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+        .logo-section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .logo-section h2 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .logo-card {
+            text-align: center;
+            padding: 30px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .logo-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+        .logo-card h3 {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #666;
+        }
+        .dark-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .light-bg {
+            background: #f9f9f9;
+        }
+        .white-bg {
+            background: white;
+        }
+        .logo-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+        }
+        .logo-display img {
+            max-width: 100%;
+            height: auto;
+        }
+        .specs {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .specs h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        .specs ul {
+            list-style: none;
+            padding: 0;
+        }
+        .specs li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .specs li:last-child {
+            border-bottom: none;
+        }
+        .color-palette {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .color-swatch {
+            text-align: center;
+        }
+        .color-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .color-label {
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 500;
+        }
+        code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>flowc Logo System</h1>
+        <p class="subtitle">Professional logo design inspired by Envoy Proxy and CNCF landscape</p>
+
+        <!-- Main Logo -->
+        <div class="logo-section">
+            <h2>📦 Main Logo Variants</h2>
+            <div class="logo-grid">
+                <div class="logo-card light-bg">
+                    <div class="logo-display">
+                        <img src="img/flowc-logo.svg" alt="flowc logo" width="150">
+                    </div>
+                    <h3>Standard Logo (240×320)</h3>
+                </div>
+                <div class="logo-card white-bg">
+                    <div class="logo-display">
+                        <img src="img/flowc-icon.svg" alt="flowc icon" width="80">
+                    </div>
+                    <h3>Icon Version (200×200)</h3>
+                </div>
+                <div class="logo-card light-bg">
+                    <div class="logo-display">
+                        <img src="img/flowc-logo-horizontal.svg" alt="flowc horizontal" width="250">
+                    </div>
+                    <h3>Horizontal with Text (400x120)</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dark Background -->
+        <div class="logo-section">
+            <h2>🌙 On Dark Background (Hero Banner Style)</h2>
+            <div class="logo-grid">
+                <div class="logo-card dark-bg">
+                    <div class="logo-display">
+                        <img src="img/flowc-logo.svg" alt="flowc logo dark" width="150">
+                    </div>
+                    <h3 style="color: white;">Standard Logo</h3>
+                </div>
+                <div class="logo-card dark-bg">
+                    <div class="logo-display">
+                        <img src="img/flowc-icon.svg" alt="flowc icon dark" width="80">
+                    </div>
+                    <h3 style="color: white;">Icon Version</h3>
+                </div>
+                <div class="logo-card dark-bg">
+                    <div class="logo-display">
+                        <img src="img/flowc-logo-horizontal.svg" alt="flowc horizontal dark" width="250">
+                    </div>
+                    <h3 style="color: white;">Horizontal with Text</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design Specs -->
+        <div class="logo-section">
+            <h2>🎨 Color Palette</h2>
+            <div class="color-palette">
+                <div class="color-swatch">
+                    <div class="color-box" style="background: linear-gradient(135deg, #DD37E0 0%, #0BA7FF 100%);"></div>
+                    <div class="color-label">Primary Gradient</div>
+                    <code>#DD37E0 → #0BA7FF</code>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #DD37E0;"></div>
+                    <div class="color-label">Primary Purple</div>
+                    <code>#DD37E0</code>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #0BA7FF;"></div>
+                    <div class="color-label">Primary Blue</div>
+                    <code>#0BA7FF</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design Concept -->
+        <div class="logo-section">
+            <h2>💡 Design Concept</h2>
+            <div class="specs">
+                <h3>Symbolism</h3>
+                <ul>
+                    <li><strong>Radial Pattern:</strong> Centralized control with omnidirectional API flow</li>
+                    <li><strong>Eight Segments:</strong> Comprehensive coverage and complete API management</li>
+                    <li><strong>Gradient Flow:</strong> Purple to blue represents control to execution</li>
+                    <li><strong>Dynamic Design:</strong> Active API management and real-time control</li>
+                    <li><strong>Central Point:</strong> Single control plane managing all API traffic</li>
+                </ul>
+            </div>
+            <div class="specs" style="margin-top: 20px;">
+                <h3>Usage Guidelines</h3>
+                <ul>
+                    <li><strong>Navbar:</strong> Use <code>flowc-icon.svg</code> (200×200)</li>
+                    <li><strong>Documentation:</strong> Use <code>flowc-logo.svg</code> (240×320)</li>
+                    <li><strong>Banners/Headers:</strong> Use <code>flowc-logo-horizontal.svg</code> (400×120)</li>
+                    <li><strong>Minimum Size:</strong> 32px for icon version</li>
+                    <li><strong>Clear Space:</strong> Maintain 16px padding around logo</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CNCF Alignment -->
+        <div class="logo-section">
+            <h2>☁️ CNCF Landscape Alignment</h2>
+            <div class="specs">
+                <h3>Design Principles</h3>
+                <ul>
+                    <li>✅ Clean, modern radial geometric design</li>
+                    <li>✅ Technology-focused aesthetic with vibrant gradients</li>
+                    <li>✅ Scalable vector graphics (SVG)</li>
+                    <li>✅ Professional cloud-native appearance</li>
+                    <li>✅ Clear symbolism of centralized control and API flow</li>
+                    <li>✅ Consistent with CNCF project branding standards</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

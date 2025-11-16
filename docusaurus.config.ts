@@ -5,8 +5,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'flowc',
+  tagline: 'Enterprise-Grade API Management Control Plane',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -75,21 +75,26 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'FlowC',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'flowc Logo',
+        src: 'img/flowc-icon.svg',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          label: 'Get Started',
+          to: '/docs/intro',
+          position: 'left',
+        },
+        {
+          href: 'https://github.com/flowc-labs',
           label: 'GitHub',
           position: 'right',
         },
@@ -102,7 +107,15 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Get Started',
+              to: '/docs/intro',
+            },
+            {
+              label: 'Mediation Policies',
+              to: '/docs/intro',
+            },
+            {
+              label: 'API Reference',
               to: '/docs/intro',
             },
           ],
@@ -111,16 +124,16 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'GitHub',
+              href: 'https://github.com/flowc-labs',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Slack',
+              href: '#',
             },
             {
               label: 'X',
-              href: 'https://x.com/docusaurus',
+              href: '#',
             },
           ],
         },
@@ -132,13 +145,13 @@ const config: Config = {
               to: '/blog',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'About',
+              href: '/#about',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} flowc Labs. Built with ❤️ on Envoy Proxy.`,
     },
     prism: {
       theme: prismThemes.github,

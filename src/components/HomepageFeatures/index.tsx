@@ -1,56 +1,86 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import clsx from 'clsx';
+import type { ReactNode } from 'react';
 import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  icon: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Dynamic Mediation Policies',
+    icon: '⚙️',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Apply and modify mediation policies at runtime without redeploying. 
+        Choose from a rich library of built-in policies or create custom ones 
+        for your specific needs.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Powered by Envoy Proxy',
+    icon: '🚀',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Leverage the battle-tested Envoy proxy as your data plane. Benefit from 
+        advanced load balancing, circuit breaking, and observability features out of the box.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Enterprise API Patterns',
+    icon: '🏢',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        First-class support for authentication, authorization, rate limiting, 
+        transformation, and more. All the patterns you need for enterprise-grade 
+        API management.
+      </>
+    ),
+  },
+  {
+    title: 'High Performance',
+    icon: '⚡',
+    description: (
+      <>
+        Built for scale with low latency and high throughput. Handle millions 
+        of requests per second with minimal overhead and resource consumption.
+      </>
+    ),
+  },
+  {
+    title: 'Comprehensive Observability',
+    icon: '📈',
+    description: (
+      <>
+        Deep visibility into your API traffic with distributed tracing, metrics, 
+        and logs. Integrate seamlessly with Prometheus, Grafana, and Jaeger.
+      </>
+    ),
+  },
+  {
+    title: 'Cloud Native',
+    icon: '☁️',
+    description: (
+      <>
+        Kubernetes-native design with declarative configuration. Deploy anywhere - 
+        on-premises, cloud, or hybrid environments with consistent behavior.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, icon, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+      <div className={styles.featureCard}>
+        <div className={styles.featureIcon}>{icon}</div>
+        <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
+        <p className={styles.featureDescription}>{description}</p>
       </div>
     </div>
   );
@@ -60,6 +90,9 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
+        <Heading as="h2" className={styles.featuresTitle}>
+          Why Choose flowc?
+        </Heading>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
