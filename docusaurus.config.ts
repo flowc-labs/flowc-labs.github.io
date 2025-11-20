@@ -75,10 +75,11 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'FlowC',
+      // title: 'Flowc',
       logo: {
         alt: 'flowc Logo',
-        src: 'img/flowc-icon.svg',
+        src: 'img/flowc.svg',
+        // height: 100,
       },
       items: [
         {

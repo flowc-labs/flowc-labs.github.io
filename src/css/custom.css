@@ -29,3 +29,8 @@
   --ifm-color-primary-lightest: #bcc5f6;
   --docusaurus-highlighted-code-line-bg: rgba(128, 148, 238, 0.2);
 }
+
+.navbar__logo img {
+  height: 160%;
+  margin-top: -10px;
+}
