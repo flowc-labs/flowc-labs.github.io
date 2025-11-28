@@ -1,6 +1,14 @@
 .features {
   padding: 5rem 2rem;
-  background: linear-gradient(to bottom, var(--ifm-background-color), var(--ifm-background-surface-color));
+  background: linear-gradient(
+    to bottom,
+    var(--ifm-background-color),
+    var(--ifm-background-surface-color)
+  );
+}
+
+[data-theme="light"] .features {
+  background-color: #ffffff;
 }
 
 .featuresTitle {
@@ -13,7 +21,6 @@
 
 .featureCard {
   padding: 2rem;
-  height: 100%;
   border-radius: 12px;
   background: var(--ifm-card-background-color);
   border: 1px solid var(--ifm-color-emphasis-200);

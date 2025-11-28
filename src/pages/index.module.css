@@ -53,7 +53,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
   50% {
@@ -215,6 +216,10 @@
   background-color: var(--ifm-background-color);
 }
 
+[data-theme="light"] .aboutSection {
+  background-color: #f8f9fa;
+}
+
 .aboutContent {
   max-width: 1000px;
   margin: 0 auto;
@@ -270,7 +275,15 @@
 /* Use Cases Section */
 .useCasesSection {
   padding: 5rem 2rem;
-  background: linear-gradient(to bottom, var(--ifm-background-surface-color), var(--ifm-background-color));
+  background: linear-gradient(
+    to bottom,
+    var(--ifm-background-surface-color),
+    var(--ifm-background-color)
+  );
+}
+
+[data-theme="light"] .useCasesSection {
+  background-color: #ffffff;
 }
 
 .useCaseGrid {
@@ -314,7 +327,11 @@
 /* Architecture Section */
 .architectureSection {
   padding: 5rem 2rem;
-  background-color: var(--ifm-background-color);
+  background-color: var(--ifm-background-surface-color);
+}
+
+[data-theme="light"] .architectureSection {
+  background-color: #f8f9fa;
 }
 
 .architectureContent {
@@ -396,6 +413,30 @@
   font-size: 2rem;
   color: var(--ifm-color-primary);
   font-weight: bold;
+}
+
+.diagramArrowContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  gap: 1rem;
+}
+
+.dataPlaneContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.dataPlaneContainer .diagramBox {
+  max-width: 250px;
+  flex: 1;
+  min-width: 180px;
 }
 
 /* CTA Section */
