@@ -61,13 +61,16 @@
             color: #666;
         }
         .dark-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #000000;
         }
         .light-bg {
             background: #f9f9f9;
         }
         .white-bg {
             background: white;
+        }
+        .black-bg {
+            background: #000000;
         }
         .logo-display {
             display: flex;
@@ -141,46 +144,71 @@
             <div class="logo-grid">
                 <div class="logo-card light-bg">
                     <div class="logo-display">
-                        <img src="img/flowc-logo.svg" alt="flowc logo" width="150">
+                        <img src="img/flowc-standard.svg" alt="flowc standard" width="150">
                     </div>
-                    <h3>Standard Logo (240×320)</h3>
+                    <h3>Standard Logo</h3>
                 </div>
                 <div class="logo-card white-bg">
                     <div class="logo-display">
-                        <img src="img/flowc-icon.svg" alt="flowc icon" width="80">
+                        <img src="img/flowc-icon.svg" alt="flowc icon" width="150">
                     </div>
-                    <h3>Icon Version (200×200)</h3>
+                    <h3>Icon Version</h3>
                 </div>
                 <div class="logo-card light-bg">
                     <div class="logo-display">
-                        <img src="img/flowc-logo-horizontal.svg" alt="flowc horizontal" width="250">
+                        <img src="img/flowc-horizontal.svg" alt="flowc horizontal" width="250">
                     </div>
-                    <h3>Horizontal with Text (400x120)</h3>
+                    <h3>Horizontal with Text</h3>
                 </div>
             </div>
         </div>
 
         <!-- Dark Background -->
         <div class="logo-section">
-            <h2>🌙 On Dark Background (Hero Banner Style)</h2>
+            <h2>🌙 On Dark Background</h2>
             <div class="logo-grid">
                 <div class="logo-card dark-bg">
                     <div class="logo-display">
-                        <img src="img/flowc-logo.svg" alt="flowc logo dark" width="150">
+                        <img src="img/flowc-standard-dark.svg" alt="flowc standard dark" width="150">
                     </div>
                     <h3 style="color: white;">Standard Logo</h3>
                 </div>
                 <div class="logo-card dark-bg">
                     <div class="logo-display">
-                        <img src="img/flowc-icon.svg" alt="flowc icon dark" width="80">
+                        <img src="img/flowc-icon-dark.svg" alt="flowc icon dark" width="150">
                     </div>
                     <h3 style="color: white;">Icon Version</h3>
                 </div>
                 <div class="logo-card dark-bg">
                     <div class="logo-display">
-                        <img src="img/flowc-logo-horizontal.svg" alt="flowc horizontal dark" width="250">
+                        <img src="img/flowc-horizontal-dark.svg" alt="flowc horizontal dark" width="250">
                     </div>
                     <h3 style="color: white;">Horizontal with Text</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Light Background -->
+        <div class="logo-section">
+            <h2>☀️ On Light Background</h2>
+            <div class="logo-grid">
+                <div class="logo-card white-bg">
+                    <div class="logo-display">
+                        <img src="img/flowc-standard-light.svg" alt="flowc standard light" width="150">
+                    </div>
+                    <h3>Standard Logo</h3>
+                </div>
+                <div class="logo-card white-bg">
+                    <div class="logo-display">
+                        <img src="img/flowc-icon-light.svg" alt="flowc icon light" width="150">
+                    </div>
+                    <h3>Icon Version</h3>
+                </div>
+                <div class="logo-card white-bg">
+                    <div class="logo-display">
+                        <img src="img/flowc-horizontal-light.svg" alt="flowc horizontal light" width="250">
+                    </div>
+                    <h3>Horizontal with Text</h3>
                 </div>
             </div>
         </div>
@@ -190,19 +218,19 @@
             <h2>🎨 Color Palette</h2>
             <div class="color-palette">
                 <div class="color-swatch">
-                    <div class="color-box" style="background: linear-gradient(135deg, #DD37E0 0%, #0BA7FF 100%);"></div>
-                    <div class="color-label">Primary Gradient</div>
-                    <code>#DD37E0 → #0BA7FF</code>
-                </div>
-                <div class="color-swatch">
-                    <div class="color-box" style="background: #DD37E0;"></div>
-                    <div class="color-label">Primary Purple</div>
-                    <code>#DD37E0</code>
-                </div>
-                <div class="color-swatch">
-                    <div class="color-box" style="background: #0BA7FF;"></div>
+                    <div class="color-box" style="background: #667eea;"></div>
                     <div class="color-label">Primary Blue</div>
-                    <code>#0BA7FF</code>
+                    <code>#667eea</code>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #ffffff; border: 2px solid #ddd;"></div>
+                    <div class="color-label">Dark Mode</div>
+                    <code>#ffffff</code>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #000000;"></div>
+                    <div class="color-label">Light Mode</div>
+                    <code>#000000</code>
                 </div>
             </div>
         </div>
@@ -213,19 +241,21 @@
             <div class="specs">
                 <h3>Symbolism</h3>
                 <ul>
-                    <li><strong>Radial Pattern:</strong> Centralized control with omnidirectional API flow</li>
-                    <li><strong>Eight Segments:</strong> Comprehensive coverage and complete API management</li>
-                    <li><strong>Gradient Flow:</strong> Purple to blue represents control to execution</li>
-                    <li><strong>Dynamic Design:</strong> Active API management and real-time control</li>
-                    <li><strong>Central Point:</strong> Single control plane managing all API traffic</li>
+                    <li><strong>Hexagon Shape:</strong> Represents relationship to Envoy Proxy, the underlying technology</li>
+                    <li><strong>Four Directional Arrows:</strong> Represent API request flows through the gateway</li>
+                    <li><strong>Northbound Ingress (↓):</strong> External API traffic flowing into the gateway. This is the incoming traffic from external sources such as external clients or other services. </li>
+                    <li><strong>Southbound Egress (↓):</strong> External API traffic flowing out of the gateway. This is the outgoing traffic to external destinations such as 3rd party services or other external systems.</li>
+                    <li><strong>Westbound Ingress (→):</strong> Internal API traffic flowing into the gateway from internal network/organization. This is the incoming traffic from internal sources such as internal services or other internal systems.</li>
+                    <li><strong>Eastbound Egress (→):</strong> Internal API traffic flowing out of the gateway to another internal service. This is the outgoing traffic to internal destinations such as other internal services or other internal systems.</li>
+                    <li><strong>Central Gateway:</strong> Single control point managing all API traffic in all directions. This is the central point of the API management system that is responsible for managing all API traffic in all directions.</li>
                 </ul>
             </div>
             <div class="specs" style="margin-top: 20px;">
                 <h3>Usage Guidelines</h3>
                 <ul>
-                    <li><strong>Navbar:</strong> Use <code>flowc-icon.svg</code> (200×200)</li>
-                    <li><strong>Documentation:</strong> Use <code>flowc-logo.svg</code> (240×320)</li>
-                    <li><strong>Banners/Headers:</strong> Use <code>flowc-logo-horizontal.svg</code> (400×120)</li>
+                    <li><strong>Navbar:</strong> Use <code>flowc-icon.svg</code> or <code>flowc-icon-dark.svg</code></li>
+                    <li><strong>Documentation:</strong> Use <code>flowc-standard.svg</code> with appropriate theme variant</li>
+                    <li><strong>Banners/Headers:</strong> Use <code>flowc-horizontal.svg</code> or theme-specific variant</li>
                     <li><strong>Minimum Size:</strong> 32px for icon version</li>
                     <li><strong>Clear Space:</strong> Maintain 16px padding around logo</li>
                 </ul>
